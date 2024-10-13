@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header .logo h1 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.main-header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.login-form input {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #45a049;
+}
+
+/* Sección 1: Introducción */
+.intro-section {
+    background-color: #f7f7f7;
+    padding: 120px 0; /* Ajustado para compensar la barra fija */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.intro-text {
+    width: 45%;
+    text-align: center;
+}
+
+.intro-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    padding: 20px 40px;
+    background-color: #FF5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #E64A19;
+}
+
+.intro-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* Sección 2: Tarjetas */
+.feature-cards {
+    background-color: white;
+    padding: 50px 0;
+}
+
+.feature-cards .container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Aumentar el tamaño de las tarjetas */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 250px; /* Aumentar altura de las imágenes */
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin: 15px 0;
+    color: #2C3E50;
+}
+
+.card p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #7f8c8d;
+}
+
+.card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* Sección 3: Cómo funciona */
+.how-it-works {
+    background-color: #f7f7f7;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.how-it-works h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.how-it-works-description {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #2C3E50;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 30px 30px 0;  /* Añadir padding al subtítulo */
+}
+
+/* Diseño de los pasos */
+.steps {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #4CAF50;  /* Color verde del botón de iniciar sesión */
+    border-radius: 50%;  /* Convertir en círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.step-icon img {
+    width: 30px;  /* Ajustar tamaño del icono dentro del círculo */
+    height: 30px;
+}
+
+.step-text {
+    text-align: left;
+}
+
+.step-text h3 {
+    font-size: 1.5rem;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+.step-text p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.footer-container {
+    font-size: 1.2rem;
+}
