@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietech - Página Principal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <h1>Dietech</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#features">Funciones</a></li>
+                    <li><a href="#how-it-works">Cómo usar</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="login-form">
+                <form id="login-form">
+                    <input type="text" id="username" name="username" placeholder="Usuario" required>
+                    <input type="password" id="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <section id="home" class="intro-section">
+        <div class="intro-container">
+            <div class="intro-text">
+                <h1>Bienvenido a Dietech</h1>
+                <p>La plataforma completa para gestionar tus ingredientes y recetas. Simplifica tu cocina y optimiza cada paso.</p>
+                <a href="registracion.html" class="cta-button">Regístrate Ahora</a>
+            </div>
+            <div class="intro-image">
+                <img src="imagenes/Recipe-Management.webp" alt="Imagen de cocina">
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="feature-cards">
+        <div class="container">
+            <div class="card">
+                <img src="imagenes/ingredientes.jpg" alt="Ver Ingredientes">
+                <h3>Ver Ingredientes</h3>
+                <p>Gestiona y organiza todos los ingredientes que tienes en tu cocina.</p>
+                <a href="/gestor-ingredientes" class="btn">Más información ➞</a>
+            </div>
+            <div class="card">
+                <img src="imagenes/recetas.jpg" alt="Ver Recetas">
+                <h3>Ver Recetas</h3>
+                <p>Explora tus recetas favoritas y crea nuevas combinaciones deliciosas.</p>
+                <a href="/gestor-recetas" class="btn">Más información ➞</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+
+            <h2>¿Cómo funciona?</h2>
+            <p class="how-it-works-description">La gestión de recetas nunca ha sido tan sencilla. Aquí tienes una guía paso a paso sobre cómo nuestro software transforma tus productos alimenticios:</p>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="imagenes/icono1.png" alt="Icono paso 1">
+                    </div>
+                    <div class="step-text">
+                        <h3>1. Inicio de sesión y vista general del panel</h3>
+                        <p>Accede a tu panel personalizado, donde verás un resumen de tus recetas, ediciones recientes y acceso rápido a las funciones principales.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="imagenes/icono2.png" alt="Icono paso 2">
+                    </div>
+                    <div class="step-text">
+                        <h3>2. Añade ingredientes</h3>
+                        <p>Introduce los ingredientes disponibles en tu cocina para mantener un inventario actualizado.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="imagenes/icono3.png" alt="Icono paso 3">
+                    </div>
+                    <div class="step-text">
+                        <h3>3. Crea recetas personalizadas</h3>
+                        <p>Combina ingredientes y crea recetas únicas adaptadas a tus necesidades.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <img src="imagenes/icono4.png" alt="Icono paso 4">
+                    </div>
+                    <div class="step-text">
+                        <h3>4. Cocina y disfruta</h3>
+                        <p>Accede a todas tus recetas en cualquier momento y disfruta cocinando de manera eficiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer con sección de contacto -->
+    <footer id="contact">
+        <div class="container footer-container">
+            <h2>Contacto</h2>
+            <p>¿Tienes alguna pregunta o necesitas más información? No dudes en contactarnos:</p>
+            <p><strong>Email:</strong> soporte@dietech.com</p>
+            <p><strong>Teléfono:</strong> +123 456 7890</p>
+            <p><strong>Dirección:</strong> Direccion 123, Buenos Aires, Argentina</p>
+        </div>
+    </footer>
+
+    <script src="login.js"></script>
+
+</body>
+</html>
