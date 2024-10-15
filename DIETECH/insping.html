@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dietech - Inspeccionar Ingredientes</title>
+    <link rel="stylesheet" href="styleinsping.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Inspeccionar Ingredientes</h1>
+        <p>Ingresa el ingrediente del que deseas obtener información:</p>
+        <input type="text" id="ingredient" placeholder="Ejemplo: tomato (Recuerda escribir el ingrediente en ingles)">
+        <button onclick="fetchIngredientInfo()">Buscar</button>
+
+        <div class="result" id="result"></div>
+
+        <!-- Botón para volver a la página de inicio -->
+        <button class="back-button" onclick="window.location.href='logged.html'">Volver al Inicio</button>
+        
+        <!-- Nuevos botones para ir a "Mis Ingredientes" y "Mis Recetas" -->
+        <button class="back-button" onclick="window.location.href='mis_ingredientes.html'">Ir a Mis Ingredientes</button>
+        <button class="back-button" onclick="window.location.href='mis_recetas.html'">Ir a Mis Recetas</button>
+    </div>
+
+    <script>
+        async function fetchIngredientInfo() {
+            const ingredient = document.getElementById('ingredient').value;
+            const appId = "1cac8b2c";  // Aquí coloca tu app_id
+            const appKey = "3b3ebb5648f51854d2c695d1c68174ca"; // Aquí coloca tu app_key
+            const url = `https://api.edamam.com/api/food-database/v2/parser?ingr=${ingredient}&app_id=${appId}&app_key=${appKey}&lang=es`;
+
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                // Mostrar datos obtenidos de la API
+                const resultDiv = document.getElementById('result');
+                if (data.hints && data.hints.length > 0) {
+                    const foodInfo = data.hints[0].food;
+                    resultDiv.innerHTML = `
+                    <h3>${foodInfo.label}</h3>
+                    <p>Categoria: ${foodInfo.category}</p>
+                    <p>Calorías: ${foodInfo.nutrients.ENERC_KCAL} kcal</p>
+                    <p>Carbohidratos: ${foodInfo.nutrients.CHOCDF} g</p>
+                    <p>Proteínas: ${foodInfo.nutrients.PROCNT} g</p>
+                    <p>Grasas: ${foodInfo.nutrients.FAT} g</p>
+                `;
+                } else {
+                    resultDiv.innerHTML = '<p>No se encontró información para ese ingrediente.</p>';
+                }
+            } catch (error) {
+                console.error('Error al conectar con la API', error);
+                document.getElementById('result').innerHTML = '<p>Error al obtener la información. Inténtalo más tarde.</p>';
+            }
+        }
+    </script>
+
+</body>
+
+</html>
+
