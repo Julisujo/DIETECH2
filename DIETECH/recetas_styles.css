@@ -1,0 +1,449 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding-top: 150px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.main-header .logo h1 {
+    font-size: 2.2rem;
+    margin: 0;
+    color: #f9f9f9;
+
+}
+
+.main-header .logo h1 span {
+    color: #f39c12;
+}
+
+.main-header .nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.main-header .nav ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.main-header .nav ul li a:hover {
+    color: #f39c12;
+}
+
+#recetas-section {
+    padding: 20px 20px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#recetas-section h1 {
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#recetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    padding: 0px 5px 40px 5px;
+}
+
+.receta-card {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    max-width: 280px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.receta-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: #f0f0f0;
+}
+
+.receta-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.receta-card p {
+    font-size: 1.1rem;
+    color: #34495e;
+    margin-bottom: 8px;
+}
+
+.receta-card strong {
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #f39c12;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 320px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.filter-buttons {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-buttons button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    background-color: #27ae60;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-buttons button:hover {
+    background-color: #1e8449;
+}
+
+#ingredientes-section {
+    padding: 100px 20px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#ingredientes-section h1 {
+    font-size: 3rem;
+    color: #2C3E50;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#ingredientes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 30px;
+}
+
+.ingrediente-card {
+    background-color: white;
+    padding: 15px;
+    width: 100%;
+    max-width: 180px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    margin: 10px;
+}
+
+.ingrediente-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    background-color: #f8f8f8;
+}
+
+.ingrediente-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #f39c12;
+}
+
+.ingrediente-card p {
+    font-size: 1rem;
+    color: #34495e;
+}
+
+#ingredientes-section .search-bar {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#ingredientes-section #search-input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#ingredientes-section #search-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+footer {
+    background-color: #2C3E50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.agregar-ingrediente-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.agregar-ingrediente-btn:hover {
+    background-color: #27ae60;
+}
+
+.cantidad-container {
+    margin-top: 10px;
+}
+
+.cantidad-input {
+    width: 80%;
+    padding: 5px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cantidad-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.btn-agregar-receta {
+    width: 40px;
+    height: 40px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-agregar-receta:hover {
+    background-color: #2ecc71;
+}
+
+.nuevo-receta-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.nuevo-receta-form input,
+.nuevo-receta-form select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.nuevo-receta-form input:focus,
+.nuevo-receta-form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.nuevo-receta-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nuevo-receta-form button:hover {
+    background-color: #45a049;
+}
+
+.botones-card {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botones-card .btn-editar {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botones-card .btn-editar:hover {
+    background-color: #2980b9;
+}
+
+.botones-card .btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botones-card .btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.main-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filtrar-ingredientes {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filtrar-ingredientes h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #2C3E50;
+}
+
+.filtrar-ingredientes input {
+    width: 300px;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+.filtrar-ingredientes input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.filtrar-ingredientes button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filtrar-ingredientes button:hover {
+    background-color: #2980b9;
+}
+
+.btn-reiniciar {
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-reiniciar:hover {
+    background-color: #c0392b;
+}
+
