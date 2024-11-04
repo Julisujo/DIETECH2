@@ -1,0 +1,13 @@
+nombre,ingredientes,dificultad,calorias,tiempo_coccion
+Sopa de verduras,"zanahoria,cebolla,ajo,patata",fácil,150,40 minutos
+Puchero,"carne,arroz,cebolla,ajo,patata",fácil,150,40 minutos
+Arroz,arroz,fácil,100,10 minutos
+fideos con pesto,"fideos, albahaca, aceite, queso ",medio,600,20 minutos
+pastel de papa,"carne, papa, cebolla, ajo ",medio,500,40 minutos
+risotto,"arroz, harina, agua, cebolla, zanahoria, morron, pollo ",dificil,600,50 minutos
+torta,"harina, huevos, leche, chocolate, manteca, aceite, chips ",dificil,700,50 minutos
+nachos,"nachos, queso, carne",facil,500,15 minutos
+carne al horno con arroz,"carne, arroz ",facil,600,40 minutos
+tarta,"masa de tarta, jamon, queso, cebolla, huevo ",medio,800,30 minutos
+milanesas,"pan rallado, huevo, carne, ajo, mostaza, sal, aceite ",dificil,500,30 minutos
+chorizo a la pomarola,"chorizo, tuco, vino, morron, tomate, ajo, cebolla, aceite, manteca ",dificil,900,30 minutos
